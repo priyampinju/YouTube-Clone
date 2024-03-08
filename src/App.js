@@ -14,7 +14,8 @@ function App() {
     <AppContext>
       <BrowserRouter>
         <div className="flex flex-col h-full">
-          <HeaderOri />
+          {/* <HeaderOri /> */}
+          <Header />
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route
