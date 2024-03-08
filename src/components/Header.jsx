@@ -52,21 +52,28 @@ const Header = () => {
           </div>
         )}
         <Link to="/" className="flex h-5 items-center">
-          <img src={ytLogoSvg} alt="logo" className="h-full dark:md:block " />
-          <img src={ytLogoMobile} alt="youtube" className="h-full md:hidden" />
+          <img src={ytLogoSvg} alt="logo" className="h-full dark:md:block" />
+          {/* <img src={ytLogoMobile} alt="youtube" className="h-full md:hidden" /> */}
         </Link>
 
-        <div className="group flex items-center">
-          <div className="flex items-center h-8 md:h-10 md:ml-10 md:pl-5 border border-[color:var(--grey-border)] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
+        <div className="group flex items-center flex-shrink-1 flex-grow-0 flex-basis-732">
+          <div
+            className="flex i
+          
+          
+          
+          tems-center h-8 md:h-10 md:ml-10 md:pl-5 border border-[color:var(--grey-border)] rounded-l-3xl border-r-0 group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0"
+          >
             <input
               type="text"
-              className="bg-transparent outline-none text-black pr-5 pl-10 md:pl-10 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500]"
+              placeholder="Search"
+              className="bg-transparent outline-none text-color:[var(--searchbox-text)] pr-5 pl-10 md:pl-10 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500]"
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyUp={searchQueryHandler}
               value={searchQuery}
             />
           </div>
-          <div className="w-10 h-8 md:h-10 flex items-center justify-center border border-[color:var(--grey-border)] rounded-r-3xl group-focus-within:md:flex">
+          <div className="w-10 h-8 md:h-10 flex items-center justify-center border border-[color:var(--grey-border)] bg-[color:var(--searchbox-bg)] rounded-r-3xl group-focus-within:md:flex">
             <IoIosSearch className="text-black text-xl" />
           </div>
         </div>
