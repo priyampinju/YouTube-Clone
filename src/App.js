@@ -7,13 +7,14 @@ import SearchResult from "./components/SearchResult";
 import VideoDetails from "./components/VideoDetails";
 
 import { AppContext } from "./context/ContextApi";
+import HeaderOri from "./components/HeaderOri";
 
 function App() {
   return (
     <AppContext>
       <BrowserRouter>
         <div className="flex flex-col h-full">
-          <Header />
+          <HeaderOri />
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route
