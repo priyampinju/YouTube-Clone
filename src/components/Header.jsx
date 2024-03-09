@@ -110,10 +110,14 @@ import ytLogoMobile from "../img/yt-logo-mobile.png";
 
 import { SlMenu } from "react-icons/sl";
 import { CgClose } from "react-icons/cg";
-import { IoIosSearch } from "react-icons/io";
+import { IoSearchOutline } from "react-icons/io5";
 import { RiVideoAddLine } from "react-icons/ri";
 import { FiBell } from "react-icons/fi";
 import { IoMdMic } from "react-icons/io";
+import { CiBellOn } from "react-icons/ci";
+import bell from "../img/bell.svg";
+import videoPlus from "../img/videoPlus.svg";
+import hamburger from "../img/hamburger.svg";
 
 import { Context } from "../context/ContextApi";
 import Loader from "./shared/Loader";
@@ -143,21 +147,21 @@ const Header = () => {
   const pagename = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-4 bg-white dark:bg-black">
       {loading && <Loader />}
       <div className="flex h-5 items-center">
-        {" "}
         {/*  div1 for the menuu and logo */}
         {pagename !== "video" && (
           <div
             // className="flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"
-            className="flex md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"
+            className="flex md:mr-5 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"
             onClick={mobileMenuToggle}
           >
             {mobileMenu ? (
               <CgClose className="text-black text-xl" />
             ) : (
-              <SlMenu className="text-black text-xl" />
+              // <SlMenu className="text-black text-xl" />
+              <img src={hamburger} alt="menu" />
             )}
           </div>
         )}
@@ -178,24 +182,23 @@ const Header = () => {
           />
         </div>
         <button className="w-[40px] h-8 md:h-10 md:w-[60px] flex items-center justify-center border border-[color:var(--grey-border)] border-l-0 bg-[color:var(--searchbox-bg)] rounded-r-3xl group-focus-within:md:flex">
-          <IoIosSearch className="text-black text-xl cursor-pointer" />
+          <IoSearchOutline className="text-black text-xl cursor-pointer" />
         </button>
-        <div className="flex items-center justify-center h-10 w-10 ml-3 rounded-full hover:bg-[#303030]/[0.6]">
+        <div className="flex items-center justify-center h-10 w-10 ml-3 bg-[color:var(--mic-bg)] rounded-full hover:bg-[#303030]/[0.6]">
           <IoMdMic className="text-black text-xl cursor-pointer" />
         </div>
       </div>
-      <div className="flex items-center">
-        <div className="hidden md:flex">
-          <div
-            className="flex items-center justify-center h-10 w10
-                rounded-full hover:bg-[#303030]/[0.6]"
-          >
-            <RiVideoAddLine className="text-black text-xl cursor-pointer" />
+      <div className="flex items-center justify-between ">
+        <div className="hidden md:flex ">
+          <div className="flex items-center  justify-center h-10 w-10 mx-1 rounded-full hover:bg-[#ccc]/[0.6]">
+            {/* <RiVideoAddLine className="text-black text-xl cursor-pointer" /> */}
+            <img src={videoPlus} alt="add video" />
           </div>
-          <div className="flex items-center justify-center h-10 w-[100px] rounded-full hover:bg-[#303030]/[0.6]">
-            <FiBell className="text-black text-xl cursor-pointer" />
+          <div className="flex items-center mx-1 justify-center h-10 w-10 rounded-full hover:bg-[#ccc]/[0.6]">
+            {/* <CiBellOn className="text-black text-xl cursor-pointer" /> */}
+            <img src={bell} alt="alert" />
           </div>
-          <div className="h-8 w-8 overflow-hidden rounded-full md:ml-4 flex">
+          <div className="h-10 w-10 overflow-hidden rounded-full md:ml-4 flex mr-3 cursor-pointer">
             <img
               src="https://xsgames.co/randomusers/avatar.php?g=male"
               alt="profile"

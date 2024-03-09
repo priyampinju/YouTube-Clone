@@ -2,4 +2,5 @@
   --grey-border: #ccc;
   --searchbox-bg: #f8f8f8;
   --searchbox-text: hsl(0, 0%, 6.7%);
+  --mic-bg: rgba(0, 0, 0, 0.05);
 }
