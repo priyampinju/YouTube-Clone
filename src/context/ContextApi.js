@@ -7,12 +7,12 @@ export const Context = createContext();
 export const AppContext = (props) => {
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState(false);
-  const [selectCategories, setSelectCategory] = useState("New");
+  const [selectCategory, setSelectCategory] = useState("New");
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
-    fetchSelectedCategoryData(selectCategories);
-  }, [selectCategories]);
+    fetchSelectedCategoryData(selectCategory);
+  }, [selectCategory]);
 
   const fetchSelectedCategoryData = (query) => {
     setLoading(true);
@@ -30,7 +30,7 @@ export const AppContext = (props) => {
         setLoading,
         searchResults,
         setSelectCategory,
-        selectCategories,
+        selectCategory,
         mobileMenu,
         setMobileMenu,
       }}

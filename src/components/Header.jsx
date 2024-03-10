@@ -158,7 +158,8 @@ const Header = () => {
             onClick={mobileMenuToggle}
           >
             {mobileMenu ? (
-              <CgClose className="text-black text-xl" />
+              // <CgClose className="text-black text-xl" />
+              <img src={hamburger} alt="menu" />
             ) : (
               // <SlMenu className="text-black text-xl" />
               <img src={hamburger} alt="menu" />
