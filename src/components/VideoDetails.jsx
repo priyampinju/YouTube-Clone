@@ -9,6 +9,8 @@ import { FetchDataFromApi } from "../utils/api";
 import { Context } from "../context/ContextApi";
 import SuggestionVideo from "./SuggestionVideo";
 
+import video1 from "../img/bg3.jpg";
+
 const VideoDetails = () => {
   const [video, setVideo] = useState();
   const [relatedVideos, setRelatedVideos] = useState();
@@ -44,18 +46,20 @@ const VideoDetails = () => {
       <div className="w-full max-w-[1280px] flex flex-col lg:flex-row">
         <div className="flex flex-col lg:w-[calc(100%-350px)] xl:w[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto ">
           <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px]ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
-            <ReactPlayer
+            {/* <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               controls
               width="100%"
               height="100%"
               style={{ backgroundColor: "#000000" }}
-            />
+            /> */}
+
+            <video src={video1}></video>
           </div>
-          <div className="text-white font-bold text-sm md:text-xl mt-4 line-clamp-2">
+          {/* <div className="text-white font-bold text-sm md:text-xl mt-4 line-clamp-2">
             {video?.title}
-          </div>
-          <div className="flex justify-between flex-col md:flex-row mt-4 ">
+          </div> */}
+          {/* <div className="flex justify-between flex-col md:flex-row mt-4 ">
             <div className="flex">
               <div className="flex items-start ">
                 <div className="flex h-11 w-11 rounded-full overflow-hidden ">
@@ -92,7 +96,7 @@ const VideoDetails = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">

@@ -1,5 +1,8 @@
 import axios from "axios";
 const BASE_URL = "https://youtube138.p.rapidapi.com";
+
+// https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=0&key=[YOUR_API_KEY] HTTP/1.1
+
 const options = {
   params: {
     hl: "en",

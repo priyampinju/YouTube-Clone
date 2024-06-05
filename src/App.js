@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route
-              path="/serchResult/:searchQuery"
+              path="/searchResult/:searchQuery"
               element={<SearchResult />}
             />
             <Route path="/video/:id" element={<VideoDetails />} />

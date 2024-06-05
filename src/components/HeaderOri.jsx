@@ -79,7 +79,7 @@ const HeaderOri = () => {
           </button>
         </div>
         <div className="flex items-center">
-          <div className="hidden md:flex">
+          <div className="sm:hidden md:flex">
             <div
               className="flex items-center justify-center h-10 w10
                 rounded-full hover:bg-[#303030]/[0.6]"
